@@ -1,0 +1,1 @@
+web: gunicorn slack_sqlbot.wsgi --log-file -
