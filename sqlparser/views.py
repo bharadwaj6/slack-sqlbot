@@ -1,7 +1,9 @@
 from django.db import connection
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def parse_sql(request):
     """ takes SQL and returns slack response """
     if request.method == 'POST':
@@ -9,7 +11,7 @@ def parse_sql(request):
         cursor = connection.cursor()
 
         response = ""
-        for row in cursor.execute(query):
+        for row in xrange(cursor.execute(query)):
             response += ' '.join([str(x) for x in cursor.fetchone()]) + "\n"
         return HttpResponse(response)
     else:
