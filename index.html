@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Slack-sqlbot : slackbot that runs sql on your database">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Slack-sqlbot</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bharadwaj6/slack-sqlbot">View on GitHub</a>
+
+          <h1 id="project_title">Slack-sqlbot</h1>
+          <h2 id="project_tagline">slackbot that runs sql on your database</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bharadwaj6/slack-sqlbot/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bharadwaj6/slack-sqlbot/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="slack-sqlbot" class="anchor" href="#slack-sqlbot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>slack-sqlbot</h1>
+
+<p>Slack command that runs sql queries on your database right inside Slack.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li><p>Fork the repo, and add your databases config to settings.py (read the warning below).</p></li>
+<li><p>Push the app to heroku and note the heroku app URL.</p></li>
+<li>
+<p>Create a slack command for your team (whatever name you like) and specify the callback URL like this:</p>
+
+<p><code>http://heroku-app-url-here/sql/</code></p>
+</li>
+<li>
+<p>That's it! Now you can execute your SQL this way:</p>
+
+<p><code>/command_name SELECT something FROM somewhere;</code></p>
+</li>
+</ol>
+
+<p>which gives you something like this inside slack:</p>
+
+<pre><code>id1 something1 something2 
+id2 something3 something4
+</code></pre>
+
+<h2>
+<a id="warning" class="anchor" href="#warning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Warning!</h2>
+
+<p>You can execute <strong>ANY</strong> SQL query like this!! </p>
+
+<p>Creating a new user with read-only permissions to the above database is recommended in most cases, to avoid any headaches.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Slack-sqlbot maintained by <a href="https://github.com/bharadwaj6">bharadwaj6</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

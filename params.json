@@ -1,0 +1,6 @@
+{
+  "name": "Slack-sqlbot",
+  "tagline": "slackbot that runs sql on your database",
+  "body": "# slack-sqlbot\r\nSlack command that runs sql queries on your database right inside Slack.\r\n\r\nUsage\r\n-----\r\n1. Fork the repo, and add your databases config to settings.py (read the warning below).\r\n\r\n2. Push the app to heroku and note the heroku app URL.\r\n\r\n3. Create a slack command for your team (whatever name you like) and specify the callback URL like this:\r\n\r\n\r\n    `http://heroku-app-url-here/sql/`\r\n\r\n4. That's it! Now you can execute your SQL this way:\r\n\r\n\r\n    `/command_name SELECT something FROM somewhere;`\r\n    \r\nwhich gives you something like this inside slack:\r\n\r\n    id1 something1 something2 \r\n    id2 something3 something4\r\n\r\nWarning!\r\n--------\r\n\r\nYou can execute **ANY** SQL query like this!! \r\n\r\nCreating a new user with read-only permissions to the above database is recommended in most cases, to avoid any headaches.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
